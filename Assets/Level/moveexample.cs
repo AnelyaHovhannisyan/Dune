@@ -14,15 +14,13 @@ public class moveexample : MonoBehaviour
     private float fallSpeed;
 
 
-    [SerializeField] TouchManager touchManager;
-
 
 
     private void Awake()
     {
-        touchManager.OnTouchDown += OnTouchDown;
-        touchManager.OnTouchUp += OnTouchUp;
-        touchManager.OnTouchDrag += OnTouchDrag;
+        GameManager.self.touchManager.OnTouchDown += OnTouchDown;
+        GameManager.self.touchManager.OnTouchUp += OnTouchUp;
+        GameManager.self.touchManager.OnTouchDrag += OnTouchDrag;
     }
 
     void OnTouchDown(Vector2 touch)

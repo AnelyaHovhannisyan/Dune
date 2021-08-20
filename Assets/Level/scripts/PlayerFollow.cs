@@ -15,7 +15,6 @@ public class PlayerFollow : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     private void FixedUpdate()
     {
-
         Vector3 d_position = target.position + offset;
         transform.position = Vector3.SmoothDamp(transform.position, d_position, ref velocity, speed);
     }

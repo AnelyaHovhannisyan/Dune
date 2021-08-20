@@ -37,8 +37,8 @@ public class Score : MonoBehaviour
             for (int i = 0; i < FinalScore; i++)
             {
                 
-                clone= Instantiate(Player, transform.position+positionContainer.listOfPosition[i].transform.position, transform.rotation, transform);
-                 //clone.GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity;
+                clone= Instantiate(Player, transform.position-positionContainer.listOfPosition[i].transform.position, transform.rotation);
+                 //clone.GetComponent<Rigidbody>().velocity = transform.GetComponent<Rigidbody>().velocity;
              //   clone.GetComponent<Rigidbody>().velocity = transform.TransformDirection(MainPlayer.GetComponent<Rigidbody>().velocity);
                 //transform.TransformDirection(Vector3.forward)
                 ClonePlayers.Add(clone);
