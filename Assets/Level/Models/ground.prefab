@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4579694511652813119}
   - component: {fileID: 4815844831921177353}
   - component: {fileID: 1290800471989813232}
-  - component: {fileID: 3349875090910653453}
+  - component: {fileID: 5490286187366772326}
   m_Layer: 0
   m_Name: CubeBend
   m_TagString: Untagged
@@ -82,20 +82,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &3349875090910653453
-MeshCollider:
+--- !u!114 &5490286187366772326
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708488167464487724}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5495902117074765545, guid: 111c6e640d3574ccdb6991e4ed38a749, type: 3}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1511ccae7919cfc46b603b9b337fdc94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8859956138257414966
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,7 +142,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!114 &8859956138257414967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,10 +222,9 @@ MonoBehaviour:
     settingsComponent: {fileID: 0}
     overrideSettingsComponent: 0
     meshFilter: {fileID: 4815844831921177353}
-    meshCollider: {fileID: 3349875090910653453}
+    meshCollider: {fileID: 0}
     spriteRenderer: {fileID: 0}
-    colliders:
-    - {fileID: 3349875090910653453}
+    colliders: []
     _isRoot: 0
   bounds:
     center: {x: 0.2800002, y: -5.6000004, z: 8.629347}
