@@ -695,7 +695,7 @@ PrefabInstance:
     - target: {fileID: 6451951069313027482, guid: a7b9fe4a56810874db6c35fb66798ae3,
         type: 3}
       propertyPath: maxSegments
-      value: 80
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6451951069313027482, guid: a7b9fe4a56810874db6c35fb66798ae3,
         type: 3}
@@ -705,12 +705,12 @@ PrefabInstance:
     - target: {fileID: 6451951069313027482, guid: a7b9fe4a56810874db6c35fb66798ae3,
         type: 3}
       propertyPath: activateSegmentsAhead
-      value: 40
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6451951069313027482, guid: a7b9fe4a56810874db6c35fb66798ae3,
         type: 3}
       propertyPath: generateSegmentsAhead
-      value: 40
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6451951069313027482, guid: a7b9fe4a56810874db6c35fb66798ae3,
         type: 3}
@@ -982,6 +982,11 @@ PrefabInstance:
     - target: {fileID: 7947237184022411120, guid: 1ea8436768a084f3394d02eea93c0e84,
         type: 3}
       propertyPath: followDelay
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947237184022411120, guid: 1ea8436768a084f3394d02eea93c0e84,
+        type: 3}
+      propertyPath: minParentDistance
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7947237184022411120, guid: 1ea8436768a084f3394d02eea93c0e84,

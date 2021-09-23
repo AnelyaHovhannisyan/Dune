@@ -66,14 +66,14 @@ public class DynamicBallController : MonoBehaviour
     Coroutine FollowParentRoutineC;
     IEnumerator FollowParentRoutine()
     {
-        //Vector3 diff;
+        Vector3 diff;
 
         while (true)
         {
 
             rb.transform.position = Vector3.Lerp(rb.transform.position, parentBallController.rb.transform.position, Time.fixedDeltaTime * followDelay);
 
-            //diff = parentBallController.rb.transform.position - rb.transform.position;
+            diff = parentBallController.rb.transform.position - rb.transform.position;
 
             //if (diff.magnitude > minParentDistance)
             //{
