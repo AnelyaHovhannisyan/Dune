@@ -25,8 +25,7 @@ public class BallsManager : MonoBehaviour
             GameObject go = Instantiate(ballPrefab, collidedBall.transform.position + new Vector3(Random.Range(-1.5f,1.5f), Random.Range(-1.5f, 1.5f), Random.Range(-1.5f, -0.5f)), Quaternion.identity,transform);
 
             DynamicBallController newBallDynamicBallController = go.GetComponent<DynamicBallController>();
-
-
+            
             newBallDynamicBallController.rb.velocity = mainDynamicBallController.rb.velocity;
             newBallDynamicBallController.parentBallController = mainDynamicBallController;
 

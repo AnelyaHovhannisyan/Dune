@@ -52,28 +52,30 @@ public class DynamicBallController : MonoBehaviour
         }
     }
 
-    [SerializeField] float minParentDistance;
+  [SerializeField] float minParentDistance;
     [SerializeField] float parentFollowForce;
     [SerializeField] float followDelay;
 
     void FollowParent()
     {
+    
         if (FollowParentRoutineC != null) StopCoroutine(FollowParentRoutineC);
 
         FollowParentRoutineC = StartCoroutine(FollowParentRoutine());
+        float distance = parentBallController.rb.transform.position.z  - rb.transform.position.z*minParentDistance;
     }
 
     Coroutine FollowParentRoutineC;
     IEnumerator FollowParentRoutine()
     {
-        Vector3 diff;
+        //Vector3 diff;
 
         while (true)
         {
 
             rb.transform.position = Vector3.Lerp(rb.transform.position, parentBallController.rb.transform.position, Time.fixedDeltaTime * followDelay);
 
-            diff = parentBallController.rb.transform.position - rb.transform.position;
+           // diff = parentBallController.rb.transform.position  - rb.transform.position;
 
             //if (diff.magnitude > minParentDistance)
             //{
