@@ -28,7 +28,7 @@ public class BallsManager : MonoBehaviour
             
             newBallDynamicBallController.rb.velocity = mainDynamicBallController.rb.velocity;
             newBallDynamicBallController.parentBallController = mainDynamicBallController;
-
+          
         }
 
 

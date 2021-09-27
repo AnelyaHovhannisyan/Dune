@@ -987,12 +987,12 @@ PrefabInstance:
     - target: {fileID: 7947237184022411120, guid: 1ea8436768a084f3394d02eea93c0e84,
         type: 3}
       propertyPath: minParentDistance
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7947237184022411120, guid: 1ea8436768a084f3394d02eea93c0e84,
         type: 3}
       propertyPath: parentFollowForce
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7947237184022411120, guid: 1ea8436768a084f3394d02eea93c0e84,
         type: 3}

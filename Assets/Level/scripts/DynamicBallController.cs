@@ -9,7 +9,7 @@ public class DynamicBallController : MonoBehaviour
 
     [SerializeField]
     private float fallSpeed;
-
+ 
     public Rigidbody rb;
 
     private void Start()
@@ -55,6 +55,7 @@ public class DynamicBallController : MonoBehaviour
   [SerializeField] float minParentDistance;
     [SerializeField] float parentFollowForce;
     [SerializeField] float followDelay;
+  float distance;
 
     void FollowParent()
     {
@@ -62,20 +63,30 @@ public class DynamicBallController : MonoBehaviour
         if (FollowParentRoutineC != null) StopCoroutine(FollowParentRoutineC);
 
         FollowParentRoutineC = StartCoroutine(FollowParentRoutine());
-        float distance = parentBallController.rb.transform.position.z  - rb.transform.position.z*minParentDistance;
+
+ 
+      
+
+
     }
 
     Coroutine FollowParentRoutineC;
     IEnumerator FollowParentRoutine()
     {
         //Vector3 diff;
-
+    
         while (true)
         {
+            distance = parentBallController.rb.transform.position.z - rb.transform.position.z;
 
             rb.transform.position = Vector3.Lerp(rb.transform.position, parentBallController.rb.transform.position, Time.fixedDeltaTime * followDelay);
+            if (distance < 0.3f)
+            {
 
-           // diff = parentBallController.rb.transform.position  - rb.transform.position;
+                rb.velocity = Vector3.zero;
+            }
+
+            //diff = parentBallController.rb.transform.position - rb.transform.position;
 
             //if (diff.magnitude > minParentDistance)
             //{
